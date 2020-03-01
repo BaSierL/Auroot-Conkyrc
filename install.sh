@@ -69,8 +69,11 @@ if [[ $instructions == Y || y || Install || install || INSTALL ]];then
 	echo "sh ~/.config/conkyrc/startconky.sh &" >> $HOME/.xprofile   #Auto Run
 		echo -e "${g} == configuer $HOME/.xprofile.${h}"
 	echo -e "${wg} == Open Conky --Auroot_conkyrc_themes.${h}"
-	sh $CONKYRC_DIR/startconky.sh	#Open conky
+#---chmod
+	read -s -p ":: Password required once :" UPASSWD
+	echo "${UPASSWD}" | sudo -s chmod +x $CONKYRC_DIR/startconky.sh | sh $CONKYRC_DIR/startconky.sh	#Open conky
 	echo;
+#---exit
 	exit 0;
 fi
 #------Exit
@@ -79,6 +82,5 @@ if [[ $instructions == N || n || quit || QUIT || * ]];then
 	#clear;
 	exit 127
 fi
-
 
 

@@ -38,7 +38,7 @@
    cp conky-auroot.desktop $HOME/.local/share/applications/
 ```
 ## startconky.sh 详解
-```
+```shell
 killall conky 2> /dev/null 
 sleep 8 #启动的时间（s）；对于Gnome或KDE使用6~20，对于Xfce/LXDE等使用较少的时间,也可以注释.
 #-q |  --quiet        以“安静模式”运行Conky（即无输出）

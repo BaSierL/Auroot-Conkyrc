@@ -13,21 +13,19 @@
 安装 ```conky-lua``` 和 ```conky-lua-nv``` 选其一！
 本套配置文件支持4核心及8核心CPU,每次使用建议重新git,或改变```Processor_number_*(4/8)``` 重命名->```clock_rings.lua```
 配套使用,不然会导致 环形监控图不显示!!!
+运行`install.sh`,会自动运行配置文件,如没有运行,请```cd $HOME/.config/conkyrc```,检查```startconky,sh```有没有执行权限.
+### Gitee
 - ``` yaourt -S conky-manager conky-lua```
-- Gitee``` git clone https://gitee.com/auroot/conkyrc.git ~/.config/conkys```
-   ```cd conkyrc```
-   ```./install.sh```
+- ``` git clone https://gitee.com/auroot/conkyrc.git ~/.config/conkys```
+- ```cd conkyrc```
+-```chmod +x install.sh | sh install.sh```
+### Github
+- ``` git clone https://github.com/BaSierL/Auroot-Conkyrc.git ~/.config/conkys```
+- ```cd conkyrc```
+-```chmod +x install.sh | sh install.sh```
 
-- Github``` git clone https://github.com/BaSierL/Auroot-Conkyrc.git ~/.config/conkys```
-      ``` cd Auroot-Conkyrc```
-      ```./install.sh```
-- ``` chmod +x startconky.sh | sh startconky.sh```
-
-- ``` cd conkys```
-- ``` ./install.sh```
-
-以上执行完毕后，在终端运行使用 source ~/.xprofile 或重新登录桌面环境来展示这个conky样式.
-
+以上执行```install.sh```完毕后，会自动将:```sh ~/.config/conkyrc/startconky.sh &``` 写入-> source ~/.xprofile 开机自动启动.
+开机后 延迟8秒启动!
 
 Now, you can run source ～/.xprofile in terminal or re-login desktop environment to display this conky style as shown in the following screenshot
 

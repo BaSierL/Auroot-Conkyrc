@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Conky-Basierl
+Name[zh_CN]=Conky-basierl
+Comment=Conky-Basierl
+Comment[zh_CN]=Conky-basierl
+Icon=/home/auroot/.config/conkys/icons/conky.png
+Exec=/home/auroot/.config/conkys/startconky.sh %U
+StartupNotify=true
+Terminal=false
+Type=Application
+Encoding=UTF-8
+

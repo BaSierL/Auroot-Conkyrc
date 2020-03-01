@@ -34,15 +34,26 @@
 ![脚本截图信息](https://gitee.com/auroot/conkyrc/raw/master/conkyrc/icons/conky.png)
 
 创建图标必不可少的文件```icons/conky-auroot.desktop```
-```cd ./conkys/icons
+```cd ./conkyrc/icons
    cp conky-auroot.desktop $HOME/.local/share/applications/
 ```
-## 显卡温度丨Nvidia 
+## startconky.sh 详解
+```
+killall conky 2> /dev/null 
+sleep 8 #启动的时间（s）；对于Gnome或KDE使用6~20，对于Xfce/LXDE等使用较少的时间,也可以注释.
+#-q |  --quiet        以“安静模式”运行Conky（即无输出）
+#-d | --daemonize     Daemonize Conky，又名叉到背景
 
-修改cpu 将此注释```#```删除（默认不显示） ：
-
-![脚本截图信息](https://gitee.com/auroot/conkyrc/raw/master/conkyrc/icons/cpu_g.png)
-
+conky -c ~/.config/conkyrc/rings --daemonize --quiet &     # 主环
+#sleep 5 这里如果"环"显示不正常,在这里设置时间5秒缓冲时间,避免环断开.
+conky -c ~/.config/conkyrc/cpu  --daemonize --quiet &      # CPU
+conky -c ~/.config/conkyrc/gpu  --daemonize --quiet &      # Nvidia显卡  没有测试AMD显卡,如不能正常显示可以注释行.
+conky -c ~/.config/conkyrc/mem  --daemonize --quiet &      # 内存
+conky -c ~/.config/conkyrc/disk  --daemonize --quiet &     # 硬盘
+conky -c ~/.config/conkyrc/network  --daemonize --quiet &  # 网络
+conky -c ~/.config/conkyrc/clock  --daemonize --quiet &    # 时间
+conky -c ~/.config/conkyrc/Linux_logo  --daemonize --quiet &   #Linux开机时间及名称
+```
 ## 网络丨Network 
 
 网络模块可以同时显示 有线网 和 无线网 ，同时显示网速（默认全显示）。

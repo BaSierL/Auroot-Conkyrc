@@ -30,12 +30,12 @@ double_buffer yes
 border_inner_margin 0
 border_outer_margin 0
  
-minimum_size 220 460
+minimum_size 220 260
 maximum_width 1024
  
 alignment tl
-gap_x 1410
-gap_y 380
+gap_x 1690
+gap_y 70
  
 # -- Graphics settings -- #
 draw_shades no

@@ -16,7 +16,7 @@ double_buffer yes
 #------------------------- Location
 minimum_size 600 140
 maximum_width 820
-gap_x 1340
+gap_x 1360
 gap_y 750
 
 #------------------------- FONT

@@ -37,7 +37,7 @@ echo -e "#=======================================================#"
 echo -e "# ${g}Name:           Arch Linux Custom script${h}"
 echo -e "# ${g}Version:        V2.0${h}"
 echo -e "# ${g}Author:         Basierl QQ2763833502${h}"
-echo -e "# ${g}Copyright:	  ${wd}https://gitee.com/auroot/conkys${h}"
+echo -e "# ${g}Copyright:	  ${wd}https://gitee.com/auroot/conkyrc${h}"
 echo -e "#=======================================================#"
 #
 read -p ":: Install Conky[Y/y] Exit [N/n]? :" instructions

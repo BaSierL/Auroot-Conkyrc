@@ -1,7 +1,7 @@
 # Conkys  修改中....
 来来回回改了很多遍，就这样吧，挺好的，以前有一个配色很好看的，手贱把硬盘格式化了。emmmmm...
 ## 截图丨Screenshot
-![脚本截图信息](https://github.com/BaSierL/Auroot-Conkyrc/raw/master/conkyrc/icons/desktop.png)
+![脚本截图信息](https://gitee.com/auroot/conkyrc/raw/master/conkyrc/icons/desktop.png)
 
 ## 来源丨Source
 魔改自：https://github.com/9527tech/conkyrc
@@ -13,7 +13,7 @@
 安装 ```conky-lua``` 和 ```conky-lua-nv``` 选其一！
 
 - ``` yaourt -S conky-manager conky-lua```
-- ``` git clone https://github.com/BaSierL/conkys.git ~/.config/conkys```
+- ``` git clone https://gitee.com/auroot/conkyrc.git ~/.config/conkys```
 - ``` cd ~/.config/conkys```
 
 - ``` chmod +x startconky.sh | sh startconky.sh```

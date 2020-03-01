@@ -1,7 +1,7 @@
 # Conkys  修改中....
 来来回回改了很多遍，就这样吧，挺好的，以前有一个配色很好看的，手贱把硬盘格式化了。emmmmm...
 ## 截图丨Screenshot
-![脚本截图信息](https://gitee.com/auroot/conkys/raw/master/icons/desktop.jpg)
+![脚本截图信息](https://gitee.com/auroot/conkyrc/raw/master/conkyrc/icons/desktop.jpg)
 
 ## 来源丨Source
 魔改自：https://github.com/9527tech/conkyrc
@@ -29,7 +29,7 @@ Now, you can run source ～/.xprofile in terminal or re-login desktop environmen
 ## 图标丨Icons
 ### 桌面图标文件在 ```icons/conky.png```
 
-![脚本截图信息](https://gitee.com/auroot/conkys/raw/master/icons/conky.png)
+![脚本截图信息](https://gitee.com/auroot/conkyrc/raw/master/conkyrc/icons/conky.png)
 
 创建图标必不可少的文件```icons/conky-basierl.desktop```
 ```cd ./conkys/icons
@@ -39,7 +39,7 @@ Now, you can run source ～/.xprofile in terminal or re-login desktop environmen
 
 修改cpu 将此注释```#```删除（默认不显示） ：
 
-![脚本截图信息](https://gitee.com/auroot/conkys/raw/master/icons/cpu_g.png)
+![脚本截图信息](https://gitee.com/auroot/conkyrc/raw/master/conkyrc/icons/cpu_g.png)
 
 ## 网络丨Network 
 

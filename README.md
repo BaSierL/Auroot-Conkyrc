@@ -1,8 +1,8 @@
 # Auroot-Conkyrc  还在维持更新中....
-来来回回改了很多遍，就这样吧，挺好的，以前有一个配色很好看的，手贱把硬盘格式化了。emmmmm...
+来来回回改了很多遍，就这样吧，挺好的，以前有一个配色很好看的，手贱把硬盘格式化了。Emmmmm...
 ## 截图丨Screenshot
 ![脚本截图信息](https://gitee.com/auroot/conkyrc/raw/master/conkyrc/icons/desktop.png)
-
+壁纸: ```auroot@163.com```
 ## 来源丨Source
 魔改自：https://github.com/9527tech/conkyrc
 ## 使用丨Usage

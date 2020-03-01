@@ -27,16 +27,15 @@
 以上执行```install.sh```完毕后，会自动将:```sh ~/.config/conkyrc/startconky.sh &``` 写入-> source ~/.xprofile 开机自动启动.
 开机后 延迟8秒启动!
 
-Now, you can run source ～/.xprofile in terminal or re-login desktop environment to display this conky style as shown in the following screenshot
 
 ## 图标丨Icons
 ### 桌面图标文件在 ```icons/conky.png```
 
 ![脚本截图信息](https://gitee.com/auroot/conkyrc/raw/master/conkyrc/icons/conky.png)
 
-创建图标必不可少的文件```icons/conky-basierl.desktop```
+创建图标必不可少的文件```icons/conky-auroot.desktop```
 ```cd ./conkys/icons
-   cp conky-basierl.desktop /usr/share/applications
+   cp conky-auroot.desktop $HOME/.local/share/applications/
 ```
 ## 显卡温度丨Nvidia 
 

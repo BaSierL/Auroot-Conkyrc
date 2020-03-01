@@ -1,0 +1,87 @@
+# -- Conky settings -- #
+background yes
+update_interval 0.1
+ 
+cpu_avg_samples 2
+net_avg_samples 2
+ 
+override_utf8_locale yes
+ 
+double_buffer yes
+no_buffers yes
+ 
+text_buffer_size 2048
+imlib_cache_size 0
+ 
+# -- Window specifications -- #
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,sticky,below,skip_taskbar,skip_pager
+own_window_colour black
+own_window_class Conky
+own_window_title Simple Default Conky
+own_window_argb_visual true
+own_window_argb_value 0
+double_buffer yes
+# KDE 支持模块
+#own_window_type normal
+ 
+border_inner_margin 0
+border_outer_margin 0
+ 
+minimum_size 830 300
+maximum_width 1024
+ 
+alignment tl
+gap_x 20
+gap_y 79
+own_window_argb_visual true
+ 
+# -- Graphics settings -- #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+ 
+# -- Text settings -- #
+use_xft yes
+xftfont WenQuanYi Zen Hei:size=18
+xftalpha 0.8
+ 
+uppercase no
+ 
+default_color FFFFFF
+ 
+# -- Lua Load -- #
+lua_load CRL_FILE
+lua_draw_hook_pre clock_rings
+
+TEXT
+    ${font WenQuanY Zen Hei:size=12}$font
+#
+#${voffset 85}${goto 435}${font WenQuanY Zen Hei:size=20}$cpu%${voffset -10}${font WenQuanY Zen Hei:size=10}${font}
+#-----------------------------------------------------------------
+${voffset 90}${goto 118}${font WenQuanY Zen Hei:size=24}${time %H:%M}${voffset -10}${font WenQuanY Zen Hei:size=10}${font}
+#-----------------------------------------------------------------
+#
+${voffset -30}${goto 316}${hr 1}
+#------CPU   FF7F50 进度条  
+${voffset -75}${goto 320}${cpugraph 50,280 60d6a9 35d699} #${voffset 0} ${alignr} 
+
+${voffset -150}${goto 290}${time %A   %F } 
+#${time %A, %d %B %Y}  
+${voffset 0}${goto 320}Kernel:  $kernel
+
+#${font WenQuanY Zen Hei:size=14}$WenQuanYi Zen Hei{voffset -120}${goto 300}BATTERY     ${battery BAT0}
+
+
+
+
+
+
+
+
+
+
+

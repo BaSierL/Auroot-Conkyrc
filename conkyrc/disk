@@ -1,0 +1,85 @@
+# -- Conky settings -- #
+background yes
+update_interval 0.5
+
+own_window_type normal 
+cpu_avg_samples 2
+net_avg_samples 2
+ 
+override_utf8_locale yes
+ 
+double_buffer yes
+no_buffers yes
+ 
+text_buffer_size 1024
+imlib_cache_size 0
+ 
+# -- Window specifications -- #
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,sticky,below,skip_taskbar,skip_pager
+own_window_colour black
+own_window_class Conky
+own_window_title Simple Default Conky
+own_window_argb_visual true
+own_window_argb_value 0
+double_buffer yes
+# KDE 支持模块
+#own_window_type normal
+ 
+border_inner_margin 0
+border_outer_margin 0
+ 
+minimum_size 240 260
+maximum_width 1024
+ 
+alignment tl
+gap_x 270
+gap_y 675
+ 
+
+# -- Graphics settings -- #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+ 
+# -- Text settings -- #
+use_xft yes
+xftfont WenQuanY Zen Hei:size=10
+xftalpha 0.8
+ 
+uppercase no
+ 
+default_color FFFFFF
+
+
+ 
+TEXT
+#--------Disk
+${voffset 10}${goto 150}
+${font GE Inspira:bold:pixelsize=25}Disk ${font}
+${font WenQuanY Zen Hei:size=12}${hr}${font}
+#
+${font GE Inspira:bold:pixelsize=15}Root ${alignr}${fs_used /}  /  ${fs_size /} ${font}
+# -- 磁盘读取 -- #
+${color white}${font GE Inspira:bold:pixelsize=15}Read: ${color FFFFFF} ${alignr}${diskio_read ROOT_DISK}
+# -- 磁盘写入 -- #
+${color white}${font GE Inspira:bold:pixelsize=15}Write: ${color FFFFFF} ${alignr}${diskio_write ROOT_DISK}
+#
+${diskiograph c9f76f b9f73e }
+# ${hr}
+# WDC Temp:$alignr ${execi 120 /usr/sbin/hddtemp /dev/sda -n --unit=C}°C
+#------------------------------------------------------------     --     ---------       -------
+#${font GE Inspira:bold:pixelsize=15}Dpan ${alignr}${fs_used /mnt/d}  /  ${fs_size /mnt/d}${font}
+# -- 磁盘读取 -- #
+#${color white}${font GE Inspira:bold:pixelsize=15}Read: ${color FFFFFF} ${alignr}${diskio_read sdb1}
+# -- 磁盘写入 -- #
+#${color white}${font GE Inspira:bold:pixelsize=15}Write: ${color FFFFFF} ${alignr}${diskio_write sdb1}
+
+
+
+
+
+

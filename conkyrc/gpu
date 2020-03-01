@@ -1,0 +1,104 @@
+# -- Conky settings -- #
+background yes
+update_interval 0.5
+ 
+cpu_avg_samples 1
+net_avg_samples 2
+ 
+override_utf8_locale yes
+ 
+double_buffer yes
+no_buffers yes
+ 
+text_buffer_size 2048
+imlib_cache_size 0
+ 
+# -- Window specifications -- #
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,sticky,below,skip_taskbar,skip_pager
+own_window_colour black
+own_window_class Conky
+own_window_title Simple Default Conky
+own_window_argb_visual true
+own_window_argb_value 0
+double_buffer yes
+# KDE 支持模块
+# own_window_type normal
+ 
+border_inner_margin 0
+border_outer_margin 0
+ 
+minimum_size 220 460
+maximum_width 1024
+ 
+alignment tl
+gap_x 1410
+gap_y 380
+ 
+# -- Graphics settings -- #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+ 
+# -- Text settings -- #
+use_xft yes
+xftfont Santana:size=10
+xftalpha 0.8
+uppercase no
+default_color FFFFFF
+#
+#
+#
+TEXT
+${font GE Inspira:bold:pixelsize=25}GPU: ${alignr }${execpi .001 (nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader)}°C ${font} 
+${font Santana:size=12}${hr 1}${font}${voffset 0}${if_existing /sys/class/drm/card0/gt_cur_freq_mhz} 
+#------------+
+# Intel iGPU |
+#------------+
+#${if_existing /sys/class/drm/card0/gt_cur_freq_mhz}
+${color2}${voffset 5}Intel® Skylake HD 630 iGPU ${color}
+${goto 0}Frate:${alignr 0}${color orange}${execpi .001 (cat /sys/class/drm/card0/gt_cur_freq_mhz)} MHz ${color}
+${goto 0}Min/Max: ${alignr 0}${color orange}${execpi .001 (cat /sys/class/drm/card0/gt_min_freq_mhz)} MHz / ${execpi .001 (cat /sys/class/drm/card0/gt_max_freq_mhz)} MHz${color}
+${color orange}${hr 1}${else}
+#------------+
+# Nvidia GPU |
+#------------+
+${color orange}${hr 1}${if_match "${lsmod | grep nvidia_uvm}">""}${color}
+${goto 0}${execpi .001 (nvidia-smi --query-gpu=gpu_name --format=csv,noheader)}${alignr 0}${execpi .001 (nvidia-smi --query-gpu=driver_version --format=csv,noheader)} 
+#-----时钟
+${goto 0}${color}Frate:${alignr 0}${color orange}${execpi .001 (nvidia-smi --query-gpu=clocks.sm --format=csv,noheader)}${color}
+#-----频率
+${goto 0}${color }Freq:${alignr 0}${color orange}${execpi .001 (nvidia-smi --query-gpu=clocks.mem --format=csv,noheader)}
+#-----内存
+${goto 0}${color }Vrem:${alignr 0}${color orange}${execpi .001 (nvidia-smi --query-gpu=index,memory.used,memory.total --format=csv | awk -F " " '{print $2}' | sed -n '2p')} MiB / ${execpi .001 (nvidia-smi --query-gpu=index,memory.used,memory.total --format=csv | awk -F " " '{print $4}' | sed -n '2p')} MiB
+#-----内存使用率
+${goto 0}${color  }Ram:${alignr 0}${color orange}${execpi .001 (nvidia-smi --query-gpu=utilization.memory --format=csv,noheader)} ${color1}
+#-----使用率
+${goto 0}${color  }GPU:${alignr 0}${color orange}${execpi .001 (nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader)} 
+#-----温度
+${goto 0}${color }Temp:${alignr 0}${color orange}${execpi .001 (nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader)}°C
+#-----超频状态 数字越低 最耗电 
+${goto 0}${color}P-State: ${alignr 0}${color orange}${execpi .001 (nvidia-smi --query-gpu=pstate --format=csv,noheader)} 
+#-----功率
+${goto 0}${color  }Pwr:${alignr 0}${color orange}${execpi .001 (nvidia-smi --query-gpu=power.draw --format=csv,noheader)} ${alignr}${color1}
+# BIOS
+${goto 0}${color }BIOS:${alignr 0}${color orange}${execpi .001 (nvidia-smi --query-gpu=vbios_version --format=csv,noheader)}
+${color orange}${hr 1}${endif}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#

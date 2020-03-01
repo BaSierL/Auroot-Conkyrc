@@ -1,0 +1,82 @@
+# -- Conky settings -- #
+background yes
+update_interval 0.8
+ 
+cpu_avg_samples 2
+net_avg_samples 2
+ 
+override_utf8_locale yes
+ 
+double_buffer yes
+no_buffers yes
+ 
+text_buffer_size 1024
+imlib_cache_size 0
+ 
+# -- Window specifications -- #
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,sticky,below,skip_taskbar,skip_pager
+own_window_colour black
+own_window_class Conky
+own_window_title Simple Default Conky
+own_window_argb_visual true
+own_window_argb_value 0
+double_buffer yes
+# KDE 支持模块
+#own_window_type normal 
+
+minimum_size 230 100
+maximum_width 1024
+ 
+alignment tl
+gap_x 30
+gap_y 379
+ 
+# -- Graphics settings -- #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+ 
+# -- Text settings -- #
+use_xft yes
+xftfont Santana:size=10
+xftalpha 0.8
+ 
+uppercase no
+ 
+default_color FFFFFF
+ 
+TEXT
+${voffset 0}${goto 190}
+#${font Santana:size=14}RAM ${alignr}$memperc%${font}
+${font GE Inspira:bold:pixelsize=25}RAM ${alignr}$memperc%${font}
+${font Santana:size=12}${hr}${font}
+${membar}
+${swapbar} --Swap
+${font GE Inspira:bold:pixelsize=16}Use ${alignr}${mem}${font} 
+${font GE Inspira:bold:pixelsize=16}B/C${alignr}${buffers}/${cached}${font} 
+
+#${top_mem name 1} ${alignr}${top_mem mem 1}
+#${top_mem name 2} ${alignr}${top_mem mem 2}
+#${top_mem name 3} ${alignr}${top_mem mem 3}
+#${top_mem name 4} ${alignr}${top_mem mem 4}
+#${top_mem name 5} ${alignr}${top_mem mem 5}
+#${top_mem name 6} ${alignr}${top_mem mem 6}
+#
+#
+#
+${goto 0}${color2}${top_mem name 1}${color}${alignr }${top_mem mem_res 1}
+${goto 0}${color2}${top_mem name 2}${color}${alignr }${top_mem mem_res 2}
+${goto 0}${color2}${top_mem name 3}${color}${alignr }${top_mem mem_res 3}
+${goto 0}${color2}${top_mem name 4}${color}${alignr }${top_mem mem_res 4}
+${goto 0}${color2}${top_mem name 5}${color}${alignr }${top_mem mem_res 5}
+${goto 0}${color2}${top_mem name 6}${color}${alignr }${top_mem mem_res 6}
+${goto 0}${color2}${top_mem name 7}${color}${alignr }${top_mem mem_res 7}
+
+
+
+
+

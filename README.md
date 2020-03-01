@@ -14,7 +14,7 @@
 本套配置文件支持4核心及8核心CPU,每次使用建议重新git,或改变```Processor_number_*(4/8)``` 重命名->```clock_rings.lua```
 配套使用,不然会导致 环形监控图不显示!!!
 运行`install.sh`,会自动运行配置文件,如没有运行,请```cd $HOME/.config/conkyrc```,检查```startconky,sh```有没有执行权限.
-### Gitee
+### Gitee 国内的git
 - ``` yaourt -S conky-manager conky-lua```
 - ``` git clone https://gitee.com/auroot/conkyrc.git ~/.config/conkys```
 - ```cd conkyrc```
@@ -71,6 +71,8 @@ GPU: Intel HD Graphics 630
 GPU: NVIDIA GeForce GTX 1050 Ti Mobile
 Memory: 2948MiB / 15959MiB
 ```
+## 4核心示意图
+![脚本截图信息](https://gitee.com/auroot/conkyrc/raw/master/conkyrc/icons/desktop2.png)
 
 ## EOF
 

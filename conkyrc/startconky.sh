@@ -16,6 +16,5 @@ conky -c ~/.config/conkyrc/disk  --daemonize --quiet &    # 硬盘
 conky -c ~/.config/conkyrc/network  --daemonize --quiet &  # 网络
 conky -c ~/.config/conkyrc/clock  --daemonize --quiet &    # 时间
 conky -c ~/.config/conkyrc/Linux_logo  --daemonize --quiet &   #Linux开机时间及名称
-#conky -c ~/.config/conkys/notes &
 #
 #--------------------------------------------------------------------------------------------------------

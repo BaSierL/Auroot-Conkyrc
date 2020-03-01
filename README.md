@@ -11,11 +11,16 @@
 安装 ```conky-manager``` 这个包主要是要里面的字体！
 
 安装 ```conky-lua``` 和 ```conky-lua-nv``` 选其一！
-
+本套配置文件支持4核心及8核心CPU,每次使用建议重新git,或改变```Processor_number_*(4/8)``` 重命名->```clock_rings.lua```
+配套使用,不然会导致 环形监控图不显示!!!
 - ``` yaourt -S conky-manager conky-lua```
-- ``` git clone https://gitee.com/auroot/conkyrc.git ~/.config/conkys```
-- ``` cd ~/.config/conkys```
+- Gitee``` git clone https://gitee.com/auroot/conkyrc.git ~/.config/conkys```
+   ```cd conkyrc```
+   ```./install.sh```
 
+- Github``` git clone https://github.com/BaSierL/Auroot-Conkyrc.git ~/.config/conkys```
+      ``` cd Auroot-Conkyrc```
+      ```./install.sh```
 - ``` chmod +x startconky.sh | sh startconky.sh```
 
 - ``` cd conkys```

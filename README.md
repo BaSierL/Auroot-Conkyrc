@@ -18,11 +18,11 @@
 - ``` yaourt -S conky-manager conky-lua```
 - ``` git clone https://gitee.com/auroot/conkyrc.git ~/.config/conkys```
 - ```cd conkyrc```
--```chmod +x install.sh | sh install.sh```
+-```chmod +x install.sh && sh install.sh```
 ### Github
 - ``` git clone https://github.com/BaSierL/Auroot-Conkyrc.git ~/.config/conkys```
 - ```cd conkyrc```
--```chmod +x install.sh | sh install.sh```
+-```chmod +x install.sh && sh install.sh```
 
 以上执行```install.sh```完毕后，会自动将:```sh ~/.config/conkyrc/startconky.sh &``` 写入-> source ~/.xprofile 开机自动启动.
 开机后 延迟8秒启动!

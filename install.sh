@@ -61,15 +61,18 @@ if [[ $instructions == Y || y || Install || install || INSTALL ]];then
 	fi
 # cpu
 	if [[ ${CPU_NUMBER} = 4 ]] ; then
-		echo -e "${g} == Processor Number [4]. Changing files rings. "
+		echo -e "${g} == Processor Number [4]. Changing files rings. ${h}"
 		mv conkyrc/clock_rings.lua conkyrc/Processor_number_8
 		mv conkyrc/Processor_number_4  conkyrc/clock_rings.lua
 	fi
 # copy font
 	if [ -d "$HOME/.local/share/fonts" ] ; then
+		echo -e "${g} == Update Font cache. ${h}"
 		cp -rf conkyrc/fonts/GE_Inspira.ttf $HOME/.local/share/fonts/
 		fc-cache -vf &>${null}
 	else
+		echo -e "${g} == Mkdir $HOME/.local/share/fonts directory . ${h}"
+		echo -e "${g} == Update Font cache. ${h}"
 		mkdir $HOME/.local/share/fonts/ 
 		cp -rf conkyrc/fonts/GE_Inspira.ttf $HOME/.local/share/fonts/
 		fc-cache -vf &>${null}

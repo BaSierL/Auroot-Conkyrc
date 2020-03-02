@@ -2,6 +2,7 @@
 #!/bin/bash
 #
 null="/dev/null"
+INFILE_DIR=$(pwd)
 #------------- 颜色
 r='\033[1;31m'	#---红
 g='\033[1;32m'	#---绿
@@ -76,7 +77,8 @@ if [[ $instructions == Y || y || Install || install || INSTALL ]];then
 #---chmod
 	read -s -p ":: Password required once :" UPASSWD
 	echo "${UPASSWD}" | sudo -s chmod +x $CONKYRC_DIR/startconky.sh | sh $CONKYRC_DIR/startconky.sh	#Open conky
-	echo;
+	rm -rf ${INFILE_DIR}
+	clear
 #---exit
 	exit 0;
 fi

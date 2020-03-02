@@ -47,23 +47,27 @@ if [[ $instructions == Y || y || Install || install || INSTALL ]];then
 	if [ -d "${HOME}/.config/conkyrc" ]; then
      		mkdir -p ${HOME}/.config/conkyrc
 	fi 
-	sed -i "s/INTERFACE_A/${NETWORK_A}/g" conkyrc/network && echo -e "${g} == Configure Conkyrc Network device One/1.${h}"
 	sed -i "s:DistID:${DISTRIBUTOR}:g" conkyrc/Linux_logo && echo -e "${g} == Configure Conkyrc Linux_logo.${h}"
 	sed -i "s:ROOT_DISK:${DISK_ROOT}:g" conkyrc/disk && echo -e "${g} == Configure Conkyrc Disk.${h}"
 	sed -i "s:CRL_FILE:${CONKYRC_DIR}/clock_rings.lua:g" conkyrc/rings && echo -e "${g} == Configure Conkyrc Rings.${h}"
-#
+#  network
+	sed -i "s/INTERFACE_A/${NETWORK_A}/g" conkyrc/network && echo -e "${g} == Configure Conkyrc Network device One/1.${h}"
 	if [ -z ${NETWORK_B} ] ; then
 		echo -e "${y} == Not found Network device Two/2. (Negligible)${h}" 
 		sed -i '68,73d' conkyrc/network
 	else
 		sed -i "s/INTERFACE_B/$NETWORK_B/g" conkyrc/network
 	fi
+# cpu
 	if [[ ${CPU_NUMBER} = 4 ]] ; then
 		echo -e "${g} == Processor Number [4]. Changing files rings. "
 		mv conkyrc/clock_rings.lua conkyrc/Processor_number_8
 		mv conkyrc/Processor_number_4  conkyrc/clock_rings.lua
 	fi
-#---cp
+# copy font
+	cp -rf conkyrc/fonts/GE_Inspira.ttf $HOME/.local/share/fonts/
+	fc-cache -vf &>${null}
+#---copy
 	cp -rf conkyrc $HOME/.config/conkyrc   #copy directory
 		echo -e "${g} == copying conkyrc to $HOME/.config/conkyrc${h}"
 	echo "sh ~/.config/conkyrc/startconky.sh &" >> $HOME/.xprofile   #Auto Run

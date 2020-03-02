@@ -66,8 +66,14 @@ if [[ $instructions == Y || y || Install || install || INSTALL ]];then
 		mv conkyrc/Processor_number_4  conkyrc/clock_rings.lua
 	fi
 # copy font
-	cp -rf conkyrc/fonts/GE_Inspira.ttf $HOME/.local/share/fonts/
-	fc-cache -vf &>${null}
+	if [ -d "$HOME/.local/share/fonts" ] ; then
+		cp -rf conkyrc/fonts/GE_Inspira.ttf $HOME/.local/share/fonts/
+		fc-cache -vf &>${null}
+	else
+		mkdir $HOME/.local/share/fonts/ 
+		cp -rf conkyrc/fonts/GE_Inspira.ttf $HOME/.local/share/fonts/
+		fc-cache -vf &>${null}
+	fi
 #---copy
 	cp -rf conkyrc $HOME/.config/conkyrc   #copy directory
 		echo -e "${g} == copying conkyrc to $HOME/.config/conkyrc${h}"

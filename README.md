@@ -8,12 +8,11 @@
 ## 使用丨Usage
 以 Arch Linux Gnome为例，此为单独使用！
 
-安装 ```conky-manager``` 这个包主要是要里面的字体！
-
-安装 ```conky-lua``` 和 ```conky-lua-nv``` 选其一！
+- 安装 ```conky-lua``` 和 ```conky-lua-nv``` 选其一！
 本套配置文件支持4核心及8核心CPU,每次使用建议重新git,或改变```Processor_number_*(4/8)``` 重命名->```clock_rings.lua```
-配套使用,不然会导致 环形监控图不显示!!!
-运行`install.sh`,会自动运行配置文件,如没有运行,请```cd $HOME/.config/conkyrc```,检查```startconky,sh```有没有执行权限.
+- 4核心上不能使用8 环形监控图,请配套使用,不然会导致 环形监控图不显示!!!
+
+- 运行`install.sh`,会自动运行配置文件,如没有运行,请```cd $HOME/.config/conkyrc```,检查```startconky,sh```有没有执行权限.
 ### Gitee 国内的git
 - ``` yaourt -S conky-manager conky-lua```
 - ``` git clone https://gitee.com/auroot/conkyrc.git ~/.config/conkys```

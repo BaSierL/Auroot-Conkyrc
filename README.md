@@ -14,14 +14,14 @@
 
 - 运行`install.sh`,会自动运行配置文件,如没有运行,请```cd $HOME/.config/conkyrc```,检查```startconky,sh```有没有执行权限.
 ### Gitee 国内的git
-- ``` yaourt -S conky-manager conky-lua```
-- ``` git clone https://gitee.com/auroot/conkyrc.git ~/.config/conkys```
+- ``` yaourt -S conky-lua```
+- ``` git clone https://gitee.com/auroot/conkyrc.git ```
 - ```cd conkyrc```
--```chmod +x install.sh && sh install.sh```
+- ```chmod +x install.sh && sh install.sh```
 ### Github
-- ``` git clone https://github.com/BaSierL/Auroot-Conkyrc.git ~/.config/conkys```
+- ``` git clone https://github.com/BaSierL/Auroot-Conkyrc.git ```
 - ```cd conkyrc```
--```chmod +x install.sh && sh install.sh```
+- ```chmod +x install.sh && sh install.sh```
 
 以上执行```install.sh```完毕后，会自动将:```sh ~/.config/conkyrc/startconky.sh &``` 写入-> source ~/.xprofile 开机自动启动.
 开机后 延迟8秒启动!
